@@ -1,0 +1,12 @@
+div{
+  background-image: url("../../../../assets/desk-593327_1920.jpg");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  h1{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
