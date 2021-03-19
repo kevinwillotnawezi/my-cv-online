@@ -1,0 +1,63 @@
+:host {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+nav {
+  border: 0;
+  font-size: 14px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  padding: 15px;
+  background: #ffffff;
+  box-shadow: 0 6px 10px -4px rgb(0 0 0 / 15%);
+  a {
+    color: #66615b;
+  }
+}
+
+div {
+  display: inline;
+  vertical-align: middle;
+  a {
+    text-decoration: none;
+    margin: 15px;
+    font-size: 20px;
+    &:hover:not(.fa) {
+      // font-family: 'Faster One', cursive;
+      // font-family: "Emblema One", cursive;
+      font-family: 'Vast Shadow', cursive;
+      // font-family: 'Sonsie One', cursive;
+    }
+  }
+}
+
+.transparent {
+  padding-top: 40px;
+  box-shadow: none;
+  background: transparent;
+  a {
+    color: #ffffff;
+  }
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.content {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  height: 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  .KW {
+    font-weight: bold;
+  }
+}
