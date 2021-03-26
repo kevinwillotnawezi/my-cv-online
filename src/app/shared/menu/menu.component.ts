@@ -22,4 +22,21 @@ export class MenuComponent implements OnInit, AfterContentInit {
       });
     })();
   }
+
+  scrollToElement(elemId): void {
+    let elem = document.getElementById(elemId);
+    const yOffset = -60;
+    const y = elem.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
+  scrollHome(){
+    let elem = document.getElementById("home");
+    elem.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+  }
 }

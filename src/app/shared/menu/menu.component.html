@@ -1,11 +1,10 @@
 <nav class="fixed-top transparent">
   <div class="content">
-    <a class="KW" routerLink="home">KEVIN WILLOT</a>
+    <a class="KW" (click)="scrollHome()" routerLink="home">KEVIN WILLOT</a>
     <div>
-      <!-- routerlink? -->
-      <a routerLink="exp">Experiences</a>
-      <a routerLink="education">Education</a>
-      <a routerLink="skills">Skills</a>
+      <a routerLink="home" (click)="scrollToElement('exp')">Experiences</a>
+      <a (click)="scrollToElement('education')">Education</a>
+      <a (click)="scrollToElement('skills')">Skills</a>
       <!-- <a routerLink="angular">Portfolio</a> -->
       <a routerLink="about">About me</a>
       <!-- routerlink? -->
