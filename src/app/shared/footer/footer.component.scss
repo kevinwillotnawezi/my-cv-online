@@ -1,0 +1,23 @@
+footer{
+  display:flex;
+  justify-content:space-between;
+  margin: 15px 15px 15px 15px;
+}
+#footer{
+  background-color: black;
+  color : white;
+  padding: 70px 70px 70px 70px;
+
+  #form{
+    display: flex;
+    div{
+      justify-content:space-between;
+    }
+  }
+
+  h1{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 70px;
+  }
+}
