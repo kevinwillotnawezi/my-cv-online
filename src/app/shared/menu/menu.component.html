@@ -1,16 +1,16 @@
 <nav class="fixed-top transparent">
   <div class="content">
-    <a class="KW" (click)="scrollHome()" routerLink="home">KEVIN WILLOT</a>
+    <a id="homeLink" routerLinkActive="active" class="KW" (click)="scrollHome()" routerLink="home">KEVIN WILLOT</a>
     <div>
-      <a routerLink="home" (click)="scrollToElement('exp')">Experiences</a>
-      <a (click)="scrollToElement('education')">Education</a>
-      <a (click)="scrollToElement('skills')">Skills</a>
+      <a id="expLink"  (click)="scrollToElement('exp')">Experiences</a>
+      <a id="educationLink" (click)="scrollToElement('education')">Education</a>
+      <a id="skillsLink" (click)="scrollToElement('skills')">Skills</a>
       <!-- <a routerLink="angular">Portfolio</a> -->
-      <a routerLink="about">About me</a>
+      <a id="aboutLink" (click)="goToAboutMe()" routerLink="about" routerLinkActive="active">About me</a>
       <!-- routerlink? -->
-      <a href="angular" class="fa fa-whatsapp"></a>
-      <a href="https://www.linkedin.com/in/kevin-willot-a07151164/" class="fa fa-linkedin"></a>
-      <a href="https://github.com/kevinwillotnawezi" class="fa fa-github"></a>
+      <a id="WhatsappLink" href="angular" class="fa fa-whatsapp"></a>
+      <a id="LinkedInLink" href="https://www.linkedin.com/in/kevin-willot-a07151164/" class="fa fa-linkedin"></a>
+      <a id="GitHubLink" href="https://github.com/kevinwillotnawezi" class="fa fa-github"></a>
     </div>
   </div>
 </nav>
