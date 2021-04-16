@@ -1,6 +1,17 @@
 section{
   color:white;
-  background-color: #66615b;
+  // background: #66615b;
+  background-image: url("../../../../assets/cup-of-coffee-1280537_1920.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 15px;

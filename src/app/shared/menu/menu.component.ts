@@ -1,4 +1,6 @@
+import { routesEnum } from './../../app-routing.module';
 import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -6,7 +8,7 @@ import { Component, OnInit, AfterContentInit } from '@angular/core';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit, AfterContentInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -24,9 +26,20 @@ export class MenuComponent implements OnInit, AfterContentInit {
   }
 
   scrollToElement(elemId): void {
+    if (this.router.url.includes(routesEnum.ABOUT)) {
+      this.router.navigate([routesEnum.HOME]);
+      setTimeout(() => {
+        this.scroll(elemId);
+      }, 20);
+    } else {
+      this.scroll(elemId);
+    }
+  }
+
+  scroll(elemId) {
     let elem = document.getElementById(elemId);
     const yOffset = -60;
-    if (elem){
+    if (elem) {
       const y = elem.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -49,7 +62,7 @@ export class MenuComponent implements OnInit, AfterContentInit {
     navItem.classList.add('active');
   }
 
-  goToAboutMe(){
+  goToAboutMe() {
     document.getElementsByClassName('active')[0].classList.remove('active');
   }
 }
