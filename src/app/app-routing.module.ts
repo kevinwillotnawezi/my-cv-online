@@ -11,8 +11,16 @@ export enum routesEnum {
 }
 
 const routes: Routes = [
-  { path: routesEnum.HOME, component: HomeComponent },
-  { path: routesEnum.ABOUT, component: AboutComponent },
+  {
+    path: routesEnum.HOME,
+    component: HomeComponent,
+    data: { animation: 'HomePage' },
+  },
+  {
+    path: routesEnum.ABOUT,
+    component: AboutComponent,
+    data: { animation: 'AboutPage' },
+  },
   { path: routesEnum.NOT_FOUND, component: NotFoundComponent },
   { path: '', redirectTo: routesEnum.HOME, pathMatch: 'full' },
   { path: '**', redirectTo: routesEnum.NOT_FOUND, pathMatch: 'full' },

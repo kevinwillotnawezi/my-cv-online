@@ -56,9 +56,6 @@ div {
   .KW {
     font-weight: bold;
     font-family: "Cinzel Decorative", cursive;
-    &:hover {
-      font-size: 24px;
-    }
   }
 }
 
@@ -77,6 +74,11 @@ a:after {
   position: absolute;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
+  .KW {
+    &:hover {
+      font-size: 24px;
+    }
+  }
 }
 a:hover:after {
   width: 100%;
