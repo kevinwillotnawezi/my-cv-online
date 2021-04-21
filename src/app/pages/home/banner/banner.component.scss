@@ -1,9 +1,8 @@
-div{
-  background-image: url("../../../../assets/desk-593327_1920.jpg");
+#home{
+  background-image: url("../../../../assets/img/desk-593327_1920.jpg");
   height: 100vh;
   display: flex;
   align-items: center;
-
   h1{
     position: relative;
     left: 50%;
@@ -39,4 +38,14 @@ div{
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
+}
+
+
+// #carouselExampleControls{
+//   height:500px !important;
+// }
+
+ngb-carousel{
+  height:100vh;
+  overflow: hidden;
 }

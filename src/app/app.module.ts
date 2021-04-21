@@ -13,6 +13,7 @@ import { SkillsComponent } from './pages/home/skills/skills.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],
