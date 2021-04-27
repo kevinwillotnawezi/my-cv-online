@@ -1,23 +1,53 @@
-footer{
-  display:flex;
-  justify-content:space-between;
-  margin: 15px 15px 15px 15px;
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px;
+  color: #9a9a9a;
+  height: 5vh;
 }
-#footer{
+#footer {
   background-color: #66615b;
-  color : white;
+  color: white;
   padding: 70px 70px 70px 70px;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
 
-  #form{
-    display: flex;
-    div{
-      justify-content:space-between;
+  #form {
+    margin: 100px 100px;
+    text-align: left;
+
+    #name_email {
+      display: flex;
+      justify-content: space-between;
+      div{
+        width: 45%;
+      }
+    }
+
+    // .example-container .mat-form-field + .mat-form-field {
+    //   margin-left: 8px;
+    //   height: 500px;
+    // }
+  }
+
+  button {
+    font-size: 19px;
+    border-radius: 30px;
+    color: #66615b;
+    background-color: white;
+    padding: 10px 10px;
+
+    &:hover {
+      background-color: #9a9a9a;
+      color: white;
+      //transition
     }
   }
 
-  h1{
+  h1 {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin-bottom: 70px;
+    font-family: "Ubuntu", sans-serif;
   }
 }

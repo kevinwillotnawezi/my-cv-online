@@ -14,6 +14,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCommonModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -33,9 +36,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    MatCommonModule,
+    MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

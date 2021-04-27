@@ -15,7 +15,6 @@
   }
 }
 
-
 .line-1{
     position: relative;
     margin: 0 auto;
@@ -40,12 +39,21 @@
   to{border-right-color: transparent;}
 }
 
-
-// #carouselExampleControls{
-//   height:500px !important;
-// }
-
 ngb-carousel{
   height:100vh;
   overflow: hidden;
 }
+
+.carousel-caption{
+  top: 75vh;
+  font-weight: 200;
+  h3{
+    font-size: 2em;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 30px 30px;
+  }
+  p{
+    font-size: 1.5em;
+  }
+}
+

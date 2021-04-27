@@ -7,3 +7,29 @@
   background-position-x: 50%;
   background-position-y: 58%;
 }
+
+.avatar{
+  text-align: center;
+  position: relative;
+  top: -75px;
+  img{
+    width: 20vh;
+    border-radius:50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+h1{
+  font-family: 'Ubuntu';
+  margin-top: -50px;
+  text-align: center;
+  color: #9a9a9a;
+  font-weight: bold;
+}
+
+.description{
+  text-align: center;
+  color: #9a9a9a;
+  margin: 30px 30px;
+  height: 33vh;
+}

@@ -30,7 +30,7 @@ export class MenuComponent implements OnInit, AfterContentInit {
       this.router.navigate([routesEnum.HOME]);
       setTimeout(() => {
         this.scroll(elemId);
-      }, 20);
+      }, 10);
     } else {
       this.scroll(elemId);
     }
