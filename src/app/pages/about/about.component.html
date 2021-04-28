@@ -2,7 +2,7 @@
 <div class="avatar">
   <img src="../../../assets/img/moi.jpg" alt="moi">
 </div>
-<h1>Kevin Willot</h1>
+<h1 class="name">Kevin Willot</h1>
 <div class="description">
   <p>
     Are you looking for a young developer with some experience? Someone who is not afraid to take on challenges?
@@ -17,4 +17,39 @@
     Organization, listening and motivation are the key words of my professional approach.
   </p>
 </div>
+<section id="footer">
+  <h1>Keep in touch?</h1>
+  <!-- => angular form -->
+  <div id="form">
+
+    <div id="name_email">
+      <!-- <p>Nom</p> -->
+      <!-- <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div> -->
+      <!-- <p>Mail</p> -->
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nom</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+    </div>
+    <div>
+      <!-- <p>Message</p> -->
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <!-- <input type="textarea"> -->
+    </div>
+  </div>
+  <button>Send Message</button>
+</section>
 <app-footer></app-footer>
