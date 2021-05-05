@@ -38,6 +38,7 @@ export class MenuComponent implements OnInit, AfterContentInit {
 
   scroll(elemId) {
     let elem = document.getElementById(elemId);
+    console.log(elem);
     const yOffset = -60;
     if (elem) {
       const y = elem.getBoundingClientRect().top + window.pageYOffset + yOffset;
@@ -45,11 +46,13 @@ export class MenuComponent implements OnInit, AfterContentInit {
     }
     document.getElementsByClassName('active')[0].classList.remove('active');
     let navItem = document.getElementById(elemId + 'Link');
-    navItem.classList.add('active');
+    if(navItem) {
+      navItem.classList.add('active');
+    }
   }
 
   scrollHome() {
-    let elem = document.getElementById('home');
+    let elem = document.getElementById('banner');
     if (elem) {
       elem.scrollIntoView({
         behavior: 'smooth',

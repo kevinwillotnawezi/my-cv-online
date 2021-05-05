@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { routesEnum } from './../../app-routing.module';
+import { Router } from '@angular/router';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
-export class FooterComponent implements OnInit {
-  email = new FormControl('', [Validators.required, Validators.email]);
+export class FooterComponent implements OnInit, OnChanges {
 
-  constructor() {}
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.router.url.includes(routesEnum.ABOUT)) {
+      document.getElementById('footer').classList.remove('home-footer');
+    } else {
+      document.getElementById('footer').classList.add('home-footer');
     }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 }

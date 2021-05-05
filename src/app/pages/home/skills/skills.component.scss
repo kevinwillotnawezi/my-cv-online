@@ -6,7 +6,63 @@ section{
   height: 93vh;
 }
 
-h1{
+#exp-head {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 30px 30px;
+  margin-bottom: 50px;
+  color: #66615b;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+    width: 60%;
+    font-size: 14px;
+  }
+
+}
+
+h2 {
+  color: #66615b;
+}
+
+
+.my-container {
+  display: flex;
+  justify-content: space-between;
+
+  mat-card {
+    width: 30%;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #66615b;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    text-align: center;
+    margin-right: 15px;
+  }
+
+  div {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .image{
+    text-align: center;
+    img {
+      height: 70px;
+    }
+  }
 }
