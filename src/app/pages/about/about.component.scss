@@ -31,18 +31,17 @@
   text-align: center;
   color: #9a9a9a;
   margin: 30px 30px;
-  height: 33vh;
 }
 
 #contact {
-  background-color: #66615b;
+  background-color: #BBBFCA;
   color: white;
-  padding: 70px 70px 70px 70px;
+  padding: 50px 70px;
   font-family: "Ubuntu", sans-serif;
   text-align: center;
 
   #form {
-    margin: 100px 100px;
+    margin: 50px 100px;
     text-align: left;
 
     #name_email {
@@ -52,25 +51,6 @@
         width: 45%;
       }
     }
-
-    // .example-container .mat-form-field + .mat-form-field {
-    //   margin-left: 8px;
-    //   height: 500px;
-    // }
-  }
-
-  button {
-    font-size: 19px;
-    border-radius: 30px;
-    color: #66615b;
-    background-color: white;
-    padding: 10px 10px;
-
-    &:hover {
-      background-color: #9a9a9a;
-      color: white;
-      //transition
-    }
   }
 
   h1 {
@@ -79,4 +59,38 @@
     margin-bottom: 70px;
     font-family: "Ubuntu", sans-serif;
   }
+  button {
+    color: #495564;
+    background-color: white;
+    font-size: 19px;
+    border-radius: 30px;
+    padding: 10px 10px;
+
+    &:hover {
+      background-color: #495564;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+.info{
+  background-color: #E8E8E8;
+  color: #495564;
+  text-align: center;
+
+  div {
+    margin: 50px 100px 50px 100px;
+    vertical-align: middle;
+    font-size: 19px;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px;
+  height: 5vh;
+  color: #9a9a9a;
+  background-color: white;
 }

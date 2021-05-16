@@ -17,39 +17,37 @@
     Organization, listening and motivation are the key words of my professional approach.
   </p>
 </div>
+<div class="info">
+  <div id="number" href="angular" class="fa fa-whatsapp">     +32 490 19 28 51</div>
+  <div id="mail" href="angular" class="fa fa-envelope">     kevin.willot.nawezi@gmail.com</div>
+</div>
 <section id="contact">
   <h1>Keep in touch?</h1>
   <!-- => angular form -->
   <div id="form">
 
     <div id="name_email">
-      <!-- <p>Nom</p> -->
-      <!-- <div class="example-container">
-        <mat-form-field appearance="fill">
-          <mat-label>Enter your email</mat-label>
-          <input matInput placeholder="pat@example.com" [formControl]="email" required>
-          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-      </div> -->
-      <!-- <p>Mail</p> -->
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Nom</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="exampleFormControlInput1" class="form-label"><span class="fa fa-user"></span>  Nom</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Jean Dupont">
       </div>
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="exampleFormControlInput2" class="form-label"><span class="fa fa-envelope"></span>  Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
       </div>
     </div>
     <div>
-      <!-- <p>Message</p> -->
       <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+        <label for="exampleFormControlTextarea1" class="form-label"><span class="fa fa-comment"></span>  Message</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
-      <!-- <input type="textarea"> -->
     </div>
   </div>
   <button>Send Message</button>
 </section>
-<app-footer></app-footer>
+<footer id="footer">
+  <p>Kevin Willot</p>
+  <p>IT Consultant</p>
+  <p>&copy;2021 Created by Kevin Willot, all rights reserved</p>
+</footer>
+<!-- <app-footer [home]="false"></app-footer> -->

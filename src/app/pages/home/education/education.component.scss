@@ -1,7 +1,6 @@
 section {
   color: white;
-  background: #66615b;
-  background-image: url("../../../../assets/img/cup-of-coffee-1280537_1920.jpg");
+  background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("../../../../assets/img/laptop-336373_1920.jpg");
 
   /* Set a specific height */
   min-height: 500px;
@@ -18,6 +17,7 @@ section {
   padding-bottom: 15px;
 
   height: 93vh;
+
 }
 
 #exp-head {
@@ -29,12 +29,14 @@ section {
   margin-bottom: 50px;
 
   h1 {
+    font-family: "Ubuntu", sans-serif;
     display: flex;
     justify-content: center;
     color: white;
   }
 
   p {
+    font-family: "Ubuntu", sans-serif;
     color: white;
     width: 60%;
     font-size: 14px;
