@@ -37,35 +37,43 @@ export class MenuComponent implements OnInit, AfterContentInit {
   }
 
   scroll(elemId) {
+    if(elemId!=='contact')
+      document.getElementById('WhatsappLink')?.classList.remove('active');
+    const activeElems = document.getElementsByClassName('active');
+    if (activeElems){
+      activeElems[0]?.classList.remove('active');
+    }
     let elem = document.getElementById(elemId);
-    console.log(elem);
     const yOffset = -60;
     if (elem) {
       const y = elem.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
-    document.getElementsByClassName('active')[0].classList.remove('active');
-    let navItem = document.getElementById(elemId + 'Link');
-    if(navItem) {
-      navItem.classList.add('active');
-    }
-  }
-
-  scrollHome() {
-    let elem = document.getElementById('banner');
-    if (elem) {
-      elem.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-        inline: 'nearest',
-      });
-    }
-    document.getElementsByClassName('active')[0].classList.remove('active');
-    let navItem = document.getElementById('homeLink');
-    navItem.classList.add('active');
+    if(elemId==='homeBanner')
+      elemId = 'home';
+    document.getElementById(elemId + 'Link')?.classList.add('active');
   }
 
   goToAboutMe() {
-    document.getElementsByClassName('active')[0].classList.remove('active');
+    if (this.router.url.includes(routesEnum.ABOUT)) {
+      this.scroll("aboutBanner");
+    } else{
+      document.getElementsByClassName('active')[0].classList.remove('active');
+    }
+    document.getElementById('aboutLink')?.classList.add('active');
+  }
+
+  goToContact(){
+    if (document.getElementsByClassName('active'))
+      document.getElementsByClassName('active')[0]?.classList.remove('active');
+    if (this.router.url.includes(routesEnum.HOME)) {
+      this.router.navigate([routesEnum.ABOUT]);
+      setTimeout(() => {
+        this.scroll("contact");
+      }, 10);
+    } else {
+      this.scroll("contact");
+    }
+    document.getElementById('WhatsappLink')?.classList.add('active');
   }
 }

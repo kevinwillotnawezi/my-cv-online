@@ -1,15 +1,15 @@
 <nav class="fixed-top transparent">
   <div class="content">
-    <a id="homeLink" routerLinkActive="active" class="KW" (click)="scrollToElement('banner')" routerLink="home">KEVIN WILLOT</a>
+    <a id="homeLink" routerLinkActive="active" class="KW" (click)="scrollToElement('homeBanner')" routerLink="home">KEVIN WILLOT</a>
     <div>
       <a id="expLink"  (click)="scrollToElement('exp')">Experiences</a>
       <a id="educationLink" (click)="scrollToElement('education')">Education</a>
       <a id="skillsLink" (click)="scrollToElement('skills')">Skills</a>
       <!-- <a routerLink="angular">Portfolio</a> -->
       <a id="aboutLink" (click)="goToAboutMe()" routerLink="about" routerLinkActive="active">About</a>
-      <a id="WhatsappLink" href="angular" class="fa fa-whatsapp"></a>
-      <a id="LinkedInLink" href="https://www.linkedin.com/in/kevin-willot-a07151164/" class="fa fa-linkedin"></a>
-      <a id="GitHubLink" href="https://github.com/kevinwillotnawezi" class="fa fa-github"></a>
+      <a id="WhatsappLink" (click)="goToContact()" class="fa fa-whatsapp"></a>
+      <a id="LinkedInLink" href="https://www.linkedin.com/in/kevin-willot-a07151164/" target="blank" class="fa fa-linkedin"></a>
+      <a id="GitHubLink" href="https://github.com/kevinwillotnawezi" target="blank" class="fa fa-github"></a>
     </div>
   </div>
 </nav>
