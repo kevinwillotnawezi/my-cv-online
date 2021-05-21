@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [ slideInAnimation ]
+  animations: [  slideInAnimation]
 })
 export class AppComponent {
   title = 'my-cv-online';
