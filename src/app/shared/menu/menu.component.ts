@@ -25,55 +25,37 @@ export class MenuComponent implements OnInit, AfterContentInit {
     })();
   }
 
-  scrollToElement(elemId): void {
-    if (this.router.url.includes(routesEnum.ABOUT)) {
-      this.router.navigate([routesEnum.HOME]);
-      setTimeout(() => {
-        this.scroll(elemId);
-      }, 10);
+  goToHomeElement(elemId): void {
+    if (this.router.url.includes(routesEnum.ABOUT) && elemId !== routesEnum.HOME) {
+      this.router.navigate([routesEnum.HOME], { fragment: elemId });
     } else {
       this.scroll(elemId);
     }
+    this.setActiveElement(elemId);
+  }
+
+  goToAboutElement(elemId): void {
+    if ( this.router.url.includes(routesEnum.HOME) && elemId !== routesEnum.ABOUT) {
+      this.router.navigate([routesEnum.ABOUT], { fragment: elemId });
+    } else {
+      this.scroll(elemId);
+    }
+    this.setActiveElement(elemId);
   }
 
   scroll(elemId) {
-    if(elemId!=='contact')
-      document.getElementById('WhatsappLink')?.classList.remove('active');
-    const activeElems = document.getElementsByClassName('active');
-    if (activeElems){
-      activeElems[0]?.classList.remove('active');
-    }
     let elem = document.getElementById(elemId);
     const yOffset = -60;
     if (elem) {
       const y = elem.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
-    if(elemId==='homeBanner')
-      elemId = 'home';
-    document.getElementById(elemId + 'Link')?.classList.add('active');
   }
 
-  goToAboutMe() {
-    if (this.router.url.includes(routesEnum.ABOUT)) {
-      this.scroll("aboutBanner");
-    } else{
-      document.getElementsByClassName('active')[0].classList.remove('active');
-    }
-    document.getElementById('aboutLink')?.classList.add('active');
-  }
-
-  goToContact(){
-    if (document.getElementsByClassName('active'))
+  setActiveElement(element) {
+    if (document.getElementsByClassName('active')) {
       document.getElementsByClassName('active')[0]?.classList.remove('active');
-    if (this.router.url.includes(routesEnum.HOME)) {
-      this.router.navigate([routesEnum.ABOUT]);
-      setTimeout(() => {
-        this.scroll("contact");
-      }, 10);
-    } else {
-      this.scroll("contact");
     }
-    document.getElementById('WhatsappLink')?.classList.add('active');
+    document.getElementById(element + 'Link')?.classList.add('active');
   }
 }
