@@ -2,12 +2,9 @@
   <ng-template ngbSlide>
     <div class="wrapper">
       <img [src]="images[0]" alt="Random first slide">
-      <!-- <div id="home">
-        <h1 class="line-1 anim-typewriter">Hi, I'm Kevin Willot</h1>
-      </div> -->
     </div>
     <div class="carousel-caption">
-      <h3>Hi, I'm Kevin Willot</h3>
+      <h3 #tw class=tw></h3>
     </div>
   </ng-template>
   <ng-template ngbSlide>
@@ -15,7 +12,7 @@
       <img [src]="images[1]" alt="Random second slide">
     </div>
     <div class="carousel-caption">
-      <h3>IT Consulant</h3>
+      <h3 #tw2 class=tw></h3>
     </div>
   </ng-template>
   <ng-template ngbSlide>
@@ -23,7 +20,8 @@
       <img [src]="images[2]" alt="Random third slide">
     </div>
     <div class="carousel-caption">
-      <h3>Analyst-developer</h3>
+      <h3 #tw3 class=tw></h3>
     </div>
   </ng-template>
 </ngb-carousel>
+
