@@ -1,0 +1,34 @@
+.tw::after {
+  content: " ";
+  white-space: pre;
+}
+
+img{
+  margin: 10px 10px;
+  height: 75vh;
+}
+
+section{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: calc(100vh - 58px);
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  h1, p {
+    margin: 10px 10px;
+    color: #495564;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15px;
+  padding-bottom: 10px;
+  background-color: #F4F4F2;
+  color: #495564;
+}

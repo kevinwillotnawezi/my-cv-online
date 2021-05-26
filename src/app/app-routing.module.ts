@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   { path: routesEnum.NOT_FOUND, component: NotFoundComponent },
   { path: '', redirectTo: routesEnum.HOME, pathMatch: 'full' },
-  { path: '**', redirectTo: routesEnum.NOT_FOUND, pathMatch: 'full' },
+  { path: '**', redirectTo: routesEnum.NOT_FOUND },
 ];
 
 @NgModule({

@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 export class MenuComponent implements OnInit, AfterContentInit {
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   ngAfterContentInit() {
     (() => {
@@ -49,6 +50,9 @@ export class MenuComponent implements OnInit, AfterContentInit {
     if (elem) {
       const y = elem.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+    if (elemId === routesEnum.ABOUT || elemId === routesEnum.HOME) {
+      document.getElementById('nav')?.classList.add('transparent');
     }
   }
 

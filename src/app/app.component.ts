@@ -7,9 +7,9 @@ import AOS from 'aos';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [  slideInAnimation]
+  animations: [slideInAnimation],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'my-cv-online';
 
   ngOnInit(): void {
