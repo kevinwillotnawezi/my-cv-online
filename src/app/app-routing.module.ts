@@ -1,4 +1,3 @@
-import { ExperiencesComponent } from './pages/home/experiences/experiences.component';
 import { AboutComponent } from './pages/about/about.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -36,7 +35,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
-      scrollOffset: [0, 620],
+      scrollOffset: [0, 600],
     }),
   ],
   exports: [RouterModule],
