@@ -22,7 +22,11 @@ const routes: Routes = [
     component: AboutComponent,
     data: { animation: 'AboutPage' },
   },
-  { path: routesEnum.NOT_FOUND, component: NotFoundComponent },
+  {
+    path: routesEnum.NOT_FOUND,
+    component: NotFoundComponent,
+    data: { animation: 'NotFoundPage' },
+  },
   { path: '', redirectTo: routesEnum.HOME, pathMatch: 'full' },
   { path: '**', redirectTo: routesEnum.NOT_FOUND },
 ];

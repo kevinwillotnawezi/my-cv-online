@@ -12,6 +12,8 @@ import AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'my-cv-online';
 
+  constructor(){}
+
   ngOnInit(): void {
     AOS.init();
   }

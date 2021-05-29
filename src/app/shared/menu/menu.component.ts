@@ -27,7 +27,7 @@ export class MenuComponent implements OnInit, AfterContentInit {
   }
 
   goToHomeElement(elemId): void {
-    if (this.router.url.includes(routesEnum.ABOUT) && elemId !== routesEnum.HOME) {
+    if (!this.router.url.includes(routesEnum.HOME) && elemId !== routesEnum.HOME) {
       this.router.navigate([routesEnum.HOME], { fragment: elemId });
     } else {
       this.scroll(elemId);
@@ -36,7 +36,7 @@ export class MenuComponent implements OnInit, AfterContentInit {
   }
 
   goToAboutElement(elemId): void {
-    if ( this.router.url.includes(routesEnum.HOME) && elemId !== routesEnum.ABOUT) {
+    if ( !this.router.url.includes(routesEnum.ABOUT) && elemId !== routesEnum.ABOUT) {
       this.router.navigate([routesEnum.ABOUT], { fragment: elemId });
     } else {
       this.scroll(elemId);
