@@ -41,10 +41,10 @@ export class BannerComponent implements AfterViewInit {
       .type("Hi, I'm Kevin Willot")
       .rest(300)
       .clear()
-      .type("I'm an IT Consultant")
+      .type("IT Consultant")
       .rest(300)
       .clear()
-      .type("I'm an Analyst-developer")
+      .type("Analyst-developer")
       .rest(300)
       .clear()
       .start();
