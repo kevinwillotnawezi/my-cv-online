@@ -1,7 +1,7 @@
 <nav id="nav" class="fixed-top transparent">
   <div class="content">
     <a id="homeLink" class="KW" (click)="goToHomeElement('home')" routerLink="home">KEVIN WILLOT</a>
-    <div>
+    <div *ngIf="isNotPageNotFound()">
       <a id="expLink"  (click)="goToHomeElement('exp')">Experiences</a>
       <a id="educationLink" (click)="goToHomeElement('education')">Education</a>
       <a id="skillsLink" (click)="goToHomeElement('skills')">Skills</a>

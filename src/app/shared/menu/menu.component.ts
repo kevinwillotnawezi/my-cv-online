@@ -10,8 +10,7 @@ import { Router } from '@angular/router';
 export class MenuComponent implements OnInit, AfterContentInit {
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngAfterContentInit() {
     (() => {
@@ -27,7 +26,10 @@ export class MenuComponent implements OnInit, AfterContentInit {
   }
 
   goToHomeElement(elemId): void {
-    if (!this.router.url.includes(routesEnum.HOME) && elemId !== routesEnum.HOME) {
+    if (
+      !this.router.url.includes(routesEnum.HOME) &&
+      elemId !== routesEnum.HOME
+    ) {
       this.router.navigate([routesEnum.HOME], { fragment: elemId });
     } else {
       this.scroll(elemId);
@@ -36,7 +38,10 @@ export class MenuComponent implements OnInit, AfterContentInit {
   }
 
   goToAboutElement(elemId): void {
-    if ( !this.router.url.includes(routesEnum.ABOUT) && elemId !== routesEnum.ABOUT) {
+    if (
+      !this.router.url.includes(routesEnum.ABOUT) &&
+      elemId !== routesEnum.ABOUT
+    ) {
       this.router.navigate([routesEnum.ABOUT], { fragment: elemId });
     } else {
       this.scroll(elemId);
@@ -61,5 +66,11 @@ export class MenuComponent implements OnInit, AfterContentInit {
       document.getElementsByClassName('active')[0]?.classList.remove('active');
     }
     document.getElementById(element + 'Link')?.classList.add('active');
+  }
+
+  isNotPageNotFound(){
+    return (
+      this.router.url.includes(routesEnum.ABOUT) || this.router.url.includes(routesEnum.HOME)
+    );
   }
 }
