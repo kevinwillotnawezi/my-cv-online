@@ -1,4 +1,4 @@
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,17 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  email = new FormControl('', [Validators.required, Validators.email]);
+
+  contactForm: FormGroup;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.contactForm = new FormGroup({
+      name: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      message: new FormControl(null, Validators.required),
+    });
+  }
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+  onSubmit() {
+    console.log('test');
+    console.log(this.contactForm);
   }
 }

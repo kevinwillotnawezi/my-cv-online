@@ -41,7 +41,9 @@
 
   #form {
     margin: 50px 100px;
+    // div{
     text-align: left;
+    // }
 
     #name_email {
       display: flex;
@@ -92,5 +94,15 @@ footer {
   padding-bottom: 10px;
   color: #9a9a9a;
   background-color: white;
-  //   height: 5vh;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
 }

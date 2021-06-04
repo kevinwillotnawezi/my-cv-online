@@ -42,7 +42,10 @@ import { MatCommonModule } from '@angular/material/core';
     MatFormFieldModule
   ],
   providers: [
-    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { appearance: 'fill' },
+    },
   ],
   bootstrap: [AppComponent],
 })

@@ -12,4 +12,7 @@ export class ExperiencesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openPDF(): void {
+    window.open('../../../../assets/file/FORTIL_Kevin WILLOT.pdf', '_blank');
+  }
 }

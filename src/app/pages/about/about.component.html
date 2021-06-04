@@ -24,26 +24,33 @@
 <section id="contact">
   <h1  data-aos="fade-up" data-aos-delay="100">Keep in touch?</h1>
   <!-- => angular form -->
-  <div id="form">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+<div id="form">
 
-    <div id="name_email" >
-      <div class="mb-3"  data-aos="fade-up" data-aos-delay="100">
-        <label for="exampleFormControlInput1" class="form-label"><span class="fa fa-user"></span>  Nom</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Jean Dupont">
-      </div>
-      <div class="mb-3"  data-aos="fade-up" data-aos-delay="200">
-        <label for="exampleFormControlInput2" class="form-label"><span class="fa fa-envelope"></span>  Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
-      </div>
+  <div id="name_email" >
+    <div class="mb-3"  data-aos="fade-up" data-aos-delay="100">
+      <label for="name" class="form-label"><span class="fa fa-user"></span>  Nom</label>
+      <input type="text" class="form-control" id="name" placeholder="Jean Dupont" formControlName = "name">
+      <span class="error" *ngIf="contactForm.get('name').touched && !contactForm.get('name').valid">field is required</span>
     </div>
-    <div>
-      <div class="mb-3"  data-aos="fade-up" data-aos-delay="300">
-        <label for="exampleFormControlTextarea1" class="form-label"><span class="fa fa-comment"></span>  Message</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
+    <div class="mb-3"  data-aos="fade-up" data-aos-delay="200">
+      <label for="email" class="form-label"><span class="fa fa-envelope"></span>  Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName = "email">
+      <span class="error" *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched">
+        please enter a valid email id
+      </span>
     </div>
   </div>
-  <button  data-aos="fade-up" data-aos-delay="400">Send Message</button>
+  <div>
+    <div class="mb-3"  data-aos="fade-up" data-aos-delay="300">
+      <label for="message" class="form-label"><span class="fa fa-comment"></span>  Message</label>
+      <textarea class="form-control" id="messsage" rows="3" formControlName = "message"></textarea>
+      <span class="error" *ngIf="contactForm.get('message').touched && !contactForm.get('message').valid">field is required</span>
+    </div>
+  </div>
+</div>
+    <button  data-aos="fade-up" data-aos-delay="400" type="submit">Send Message</button>
+  </form>
 </section>
 <footer id="footer">
   <p>Kevin Willot</p>
