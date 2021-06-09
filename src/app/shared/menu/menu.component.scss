@@ -24,6 +24,12 @@ nav {
       background: #ffffff;
     }
   }
+
+  .hamburger-inner,
+  .hamburger-inner::after,
+  .hamburger-inner::before {
+    background-color: white;
+  }
 }
 
 .fixed-top {
@@ -85,8 +91,7 @@ a:hover:after {
   left: 0;
 }
 
-
-.active:after{
+.active:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -94,4 +99,11 @@ a:hover:after {
   height: 2px;
   left: 0;
   width: 100%;
+}
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+  background-color: #83807c;
+  height:2.3px;
 }
