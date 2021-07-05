@@ -6,10 +6,19 @@ nav {
   padding: 15px;
   background: #ffffff;
   box-shadow: 0 6px 10px -4px rgb(0 0 0 / 15%);
-  a {
+
+  #homeLink {
     color: #83807c;
     &:after {
       background: #66615b;
+    }
+  }
+  @media (min-width: 980px) {
+    a {
+      color: #83807c;
+      &:after {
+        background: #66615b;
+      }
     }
   }
 }
@@ -18,7 +27,8 @@ nav {
   padding-top: 40px;
   box-shadow: none;
   background: transparent;
-  a {
+  a,
+  #homeLink {
     color: #ffffff;
     &:after {
       background: #ffffff;
@@ -49,8 +59,12 @@ div {
 }
 
 .content {
-  margin-left: 10vw;
-  margin-right: 10vw;
+  @media (min-width: 1150px) {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  margin-left: 3vw;
+  margin-right: 3vw;
   height: 30px;
   display: -ms-flexbox;
   display: flex;
@@ -110,29 +124,39 @@ a {
 
 button {
   display: block;
-  @media (min-width: 768px) {
+  @media (min-width: 980px) {
     display: none;
   }
 }
 #mynav {
-  @media (max-width: 768px) {
-    #navigation{
+  @media (max-width: 980px) {
+    //TODO better
+    width: 75px;
+    transition: width 0.4s;
+    #navigation {
       display: none;
     }
-    button{
+    button {
       display: block;
     }
-    
   }
 }
 
 .mobile {
-  // height: 100vh;
   #navigation {
     display: flex !important;
     flex-direction: column;
     margin-top: 20px;
-    align-items: center;
+    align-items: left;
+  }
+  a,
+  button {
+    color: white !important;
+  }
+  .hamburger-inner,
+  .hamburger-inner::after,
+  .hamburger-inner::before {
+    background-color: white !important;
   }
 
   position: fixed;
@@ -141,13 +165,13 @@ button {
   color: #f4f4f2;
   top: 0;
   height: 100%;
-  width: 230px;
+  width: 230px !important;
   right: 0;
   z-index: 1032;
   visibility: visible;
   overflow-y: visible;
   border-top: none;
   text-align: left;
-  border-left: 1px solid #ccc5b9;
+  // border-left: 1px solid #ccc5b9;
   padding-top: 15px;
 }
