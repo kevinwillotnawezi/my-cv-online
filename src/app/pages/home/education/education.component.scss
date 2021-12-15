@@ -16,7 +16,9 @@ section {
   padding-top: 15px;
   padding-bottom: 15px;
 
-  height: calc(100vh - 44px);
+  @media (min-width: 980px) {
+    height: calc(100vh - 44px);
+  }
 
 }
 
@@ -77,16 +79,18 @@ section {
     }
   }
 
+
   @media (max-width:980px) {
     flex-direction: column;    
     mat-card {
       width: 95%;
-      display: grid;
-      grid-template-columns: 20% 30% 50%;
-      align-items: center;
-      grid-gap: 10px;
-      background-color: #fff;
-      color: #444;
+      height: 300px;
+      // display: grid;
+      // grid-template-columns: 20% 30% 50%;
+      // align-items: center;
+      // grid-gap: 10px;
+      // background-color: #fff;
+      // color: #444;
     }
 
     div {
@@ -94,6 +98,10 @@ section {
       margin-right: 15px;
       margin-top: 7px;
       margin-bottom: 7px;
+    }
+
+    .big{
+      display: none;
     }
   }
 }

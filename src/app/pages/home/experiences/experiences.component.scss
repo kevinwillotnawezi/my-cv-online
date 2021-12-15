@@ -74,3 +74,10 @@ section {
     }
   }
 }
+
+.big{
+  // display: flex;
+  @media (max-width: 666px) {
+    display: none;
+  }
+}
