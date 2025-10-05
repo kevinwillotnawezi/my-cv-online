@@ -44,3 +44,11 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+# Angular build cache
+.angular/cache
+# Angular local environment settings
+/src/environments/environment.local.ts
+
+package-lock.json
