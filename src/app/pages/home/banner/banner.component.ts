@@ -1,6 +1,6 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import Typewriter from 't-writer.js';
+import { TypewriterService } from '../../../services/typewriter.service';
 
 @Component({
   selector: 'app-banner',
@@ -9,9 +9,9 @@ import Typewriter from 't-writer.js';
   providers: [NgbCarouselConfig],
 })
 export class BannerComponent implements AfterViewInit {
-  @ViewChild('tw') typewriterElement;
-  @ViewChild('tw2') typewriterElement2;
-  @ViewChild('tw3') typewriterElement3;
+  @ViewChild('tw') typewriterElement!: ElementRef<HTMLElement>;
+  @ViewChild('tw2') typewriterElement2!: ElementRef<HTMLElement>;
+  @ViewChild('tw3') typewriterElement3!: ElementRef<HTMLElement>;
 
   images = [
     '../../../../assets/img/desk-593327_1920.jpg',
@@ -19,7 +19,16 @@ export class BannerComponent implements AfterViewInit {
     '../../../../assets/img/cup-of-coffee-1280537_1920.jpg',
   ];
 
-  constructor(config: NgbCarouselConfig) {
+  private texts = [
+    "Hi, I'm Kevin Willot",
+    "IT Consultant",
+    "Analyst-developer"
+  ];
+
+  constructor(
+    config: NgbCarouselConfig,
+    private typewriterService: TypewriterService
+  ) {
     config.interval = 3350;
     config.keyboard = true;
     config.pauseOnHover = true;
@@ -31,22 +40,15 @@ export class BannerComponent implements AfterViewInit {
     this.write(this.typewriterElement3);
   }
 
-  write(elem){
+  write(elem: ElementRef<HTMLElement>) {
     const target = elem?.nativeElement;
-    const writer = new Typewriter(target, {
-      loop: true,
-      typeColor: 'white',
-    });
-    writer
-      .type("Hi, I'm Kevin Willot")
-      .rest(300)
-      .clear()
-      .type("IT Consultant")
-      .rest(300)
-      .clear()
-      .type("Analyst-developer")
-      .rest(300)
-      .clear()
-      .start();
+    if (target) {
+      this.typewriterService.typewriteMultiple(target, this.texts, {
+        speed: 75,
+        deleteSpeed: 50,
+        loop: true,
+        delay: 300
+      });
+    }
   }
 }

@@ -26,15 +26,17 @@ export class MenuComponent implements OnInit, AfterContentInit {
     const hamburger = document.querySelector('.hamburger');
     const navigation = document.getElementById('mynav');
     // On click
-    hamburger.addEventListener('click', function () {
-      // Toggle class "is-active"
-      hamburger.classList.toggle('is-active');
-      // Do something else, like open/close menu
-      navigation?.classList.toggle('mobile')
-    });
+    if (hamburger) {
+      hamburger.addEventListener('click', function () {
+        // Toggle class "is-active"
+        hamburger.classList.toggle('is-active');
+        // Do something else, like open/close menu
+        navigation?.classList.toggle('mobile')
+      });
+    }
   }
 
-  goToHomeElement(elemId): void {
+  goToHomeElement(elemId: string): void {
     if (
       !this.router.url.includes(routesEnum.HOME) &&
       elemId !== routesEnum.HOME
@@ -46,7 +48,7 @@ export class MenuComponent implements OnInit, AfterContentInit {
     this.setActiveElement(elemId);
   }
 
-  goToAboutElement(elemId): void {
+  goToAboutElement(elemId: string): void {
     if (
       !this.router.url.includes(routesEnum.ABOUT) &&
       elemId !== routesEnum.ABOUT
@@ -58,7 +60,7 @@ export class MenuComponent implements OnInit, AfterContentInit {
     this.setActiveElement(elemId);
   }
 
-  scroll(elemId) {
+  scroll(elemId: string) {
     let elem = document.getElementById(elemId);
     const yOffset = -60;
     if (elem) {
@@ -70,7 +72,7 @@ export class MenuComponent implements OnInit, AfterContentInit {
     }
   }
 
-  setActiveElement(element) {
+  setActiveElement(element: string) {
     if (document.getElementsByClassName('active')) {
       document.getElementsByClassName('active')[0]?.classList.remove('active');
     }

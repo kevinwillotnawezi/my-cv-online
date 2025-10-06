@@ -1,5 +1,5 @@
-import Typewriter from 't-writer.js';
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { TypewriterService } from '../../services/typewriter.service';
 
 @Component({
   selector: 'app-not-found',
@@ -7,17 +7,19 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
   styleUrls: ['./not-found.component.scss'],
 })
 export class NotFoundComponent implements AfterViewInit {
-  @ViewChild('tw') typewriterElement;
+  @ViewChild('tw') typewriterElement!: ElementRef<HTMLElement>;
 
-  constructor() {}
+  constructor(private typewriterService: TypewriterService) {}
 
   ngAfterViewInit(): void {
     document.getElementById('nav')?.classList.remove('transparent');
     const target = this.typewriterElement?.nativeElement;
-    const writer = new Typewriter(target, {
-      loop: true,
-      typeColor: '#495564',
-    });
-    writer.type('Not Found.').rest(2000).start();
+    if (target) {
+      this.typewriterService.typewrite(target, 'Not Found.', {
+        speed: 75,
+        loop: true,
+        delay: 2000
+      });
+    }
   }
 }

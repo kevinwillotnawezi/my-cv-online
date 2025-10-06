@@ -1,7 +1,7 @@
 import { slideInAnimation } from '../app/animations/animation';
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import AOS from 'aos';
+// import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor(){}
 
   ngOnInit(): void {
-    AOS.init();
+    // AOS.init();
   }
 
   prepareRoute(outlet: RouterOutlet) {
