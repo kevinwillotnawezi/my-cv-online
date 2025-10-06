@@ -17,6 +17,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCommonModule } from '@angular/material/core';
+import { TitleStrategy, DefaultTitleStrategy, UrlSerializer, DefaultUrlSerializer } from '@angular/router';
+import { CustomTitleStrategy } from './services/custom-title.strategy';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,15 @@ import { MatCommonModule } from '@angular/material/core';
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: { appearance: 'fill' },
+    },
+    // Configuration des stratégies du routeur
+    {
+      provide: TitleStrategy,
+      useClass: CustomTitleStrategy,
+    },
+    {
+      provide: UrlSerializer,
+      useClass: DefaultUrlSerializer,
     },
   ],
   bootstrap: [AppComponent],
