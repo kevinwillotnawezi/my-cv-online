@@ -1,4 +1,4 @@
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  contactForm: FormGroup;
+  contactForm: UntypedFormGroup;
 
   constructor() {}
 
   ngOnInit() {
-    this.contactForm = new FormGroup({
-      name: new FormControl(null, Validators.required),
-      email: new FormControl(null, [Validators.required, Validators.email]),
-      message: new FormControl(null, Validators.required),
+    this.contactForm = new UntypedFormGroup({
+      name: new UntypedFormControl(null, Validators.required),
+      email: new UntypedFormControl(null, [Validators.required, Validators.email]),
+      message: new UntypedFormControl(null, Validators.required),
     });
   }
 
