@@ -1,5 +1,5 @@
 import { routesEnum } from './../../app.routes';
-import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { Component, AfterContentInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
@@ -9,10 +9,8 @@ import { Router, RouterLink } from '@angular/router';
     standalone: true,
     imports: [RouterLink]
 })
-export class MenuComponent implements OnInit, AfterContentInit {
+export class MenuComponent implements AfterContentInit {
   constructor(private router: Router) {}
-
-  ngOnInit(): void {}
 
   ngAfterContentInit() {
     (() => {

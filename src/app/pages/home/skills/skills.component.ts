@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
@@ -8,11 +8,8 @@ import { MatCardModule } from '@angular/material/card';
     standalone: true,
     imports: [MatCardModule]
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

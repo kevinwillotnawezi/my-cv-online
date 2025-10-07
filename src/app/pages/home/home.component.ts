@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BannerComponent } from './banner/banner.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { EducationComponent } from './education/education.component';
@@ -12,9 +12,6 @@ import { FooterComponent } from '../../shared/footer/footer.component';
     standalone: true,
     imports: [BannerComponent, ExperiencesComponent, EducationComponent, SkillsComponent, FooterComponent]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   constructor() {}
-
-  ngOnInit(): void {}
-
 }

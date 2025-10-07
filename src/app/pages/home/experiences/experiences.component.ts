@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-experiences',
@@ -7,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
     standalone: true,
     imports: []
 })
-export class ExperiencesComponent implements OnInit {
+export class ExperiencesComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   openPDF(): void {
     window.open('../../../../assets/file/FORTIL_Kevin WILLOT.pdf', '_blank');
