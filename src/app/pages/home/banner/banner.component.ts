@@ -1,12 +1,15 @@
 import { Component, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig, NgbCarousel, NgbSlide } from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule } from '@angular/common';
 import { TypewriterService } from '../../../services/typewriter.service';
 
 @Component({
-  selector: 'app-banner',
-  templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.scss'],
-  providers: [NgbCarouselConfig],
+    selector: 'app-banner',
+    templateUrl: './banner.component.html',
+    styleUrls: ['./banner.component.scss'],
+    providers: [NgbCarouselConfig],
+    standalone: true,
+    imports: [NgbCarousel, NgbSlide, CommonModule]
 })
 export class BannerComponent implements AfterViewInit {
   @ViewChild('tw') typewriterElement!: ElementRef<HTMLElement>;

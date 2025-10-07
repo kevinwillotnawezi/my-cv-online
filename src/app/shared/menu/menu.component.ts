@@ -1,11 +1,13 @@
-import { routesEnum } from './../../app-routing.module';
+import { routesEnum } from './../../app.routes';
 import { Component, OnInit, AfterContentInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+    selector: 'app-menu',
+    templateUrl: './menu.component.html',
+    styleUrls: ['./menu.component.scss'],
+    standalone: true,
+    imports: [RouterLink]
 })
 export class MenuComponent implements OnInit, AfterContentInit {
   constructor(private router: Router) {}
