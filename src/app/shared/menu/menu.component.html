@@ -2,20 +2,22 @@
   <div class="content">
     <a id="homeLink" class="KW" (click)="goToHomeElement('home')" routerLink="home">KEVIN WILLOT</a>
     <div id="mynav">
-      <button class="hamburger hamburger--spin" type="button">
+      <button class="hamburger hamburger--spin" type="button" aria-label="Open navigation menu" title="Open navigation menu">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
-      <div id="navigation" *ngIf="isNotPageNotFound()">
-        <a id="expLink" (click)="goToHomeElement('exp')">Experiences</a>
-        <a id="educationLink" (click)="goToHomeElement('education')">Education</a>
-        <a id="skillsLink" (click)="goToHomeElement('skills')">Skills</a>
-        <a id="aboutLink" (click)="goToAboutElement('about')" routerLink="about">About</a>
-        <a id="contactLink" (click)="goToAboutElement('contact')" class="fa fa-whatsapp"></a>
-        <a id="LinkedInLink" href="https://www.linkedin.com/in/kevin-willot-a07151164/" target="blank" class="fa fa-linkedin"></a>
-        <a id="GitHubLink" href="https://github.com/kevinwillotnawezi" target="blank" class="fa fa-github"></a>
-      </div>
+      @if (isNotPageNotFound()) {
+        <div id="navigation">
+          <a id="expLink" (click)="goToHomeElement('exp')">Experiences</a>
+          <a id="educationLink" (click)="goToHomeElement('education')">Education</a>
+          <a id="skillsLink" (click)="goToHomeElement('skills')">Skills</a>
+          <a id="aboutLink" (click)="goToAboutElement('about')" routerLink="about">About</a>
+          <a id="contactLink" (click)="goToAboutElement('contact')" class="fa fa-whatsapp"></a>
+          <a id="LinkedInLink" href="https://www.linkedin.com/in/kevin-willot-a07151164/" target="blank" class="fa fa-linkedin"></a>
+          <a id="GitHubLink" href="https://github.com/kevinwillotnawezi" target="blank" class="fa fa-github"></a>
+        </div>
+      }
     </div>
   </div>
 </nav>
