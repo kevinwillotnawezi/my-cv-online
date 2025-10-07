@@ -1,6 +1,6 @@
 import { Component, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { NgbCarouselConfig, NgbCarousel, NgbSlide } from '@ng-bootstrap/ng-bootstrap';
-import { CommonModule } from '@angular/common';
+
 import { TypewriterService } from '../../../services/typewriter.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { TypewriterService } from '../../../services/typewriter.service';
     styleUrls: ['./banner.component.scss'],
     providers: [NgbCarouselConfig],
     standalone: true,
-    imports: [NgbCarousel, NgbSlide, CommonModule]
+    imports: [NgbCarousel, NgbSlide]
 })
 export class BannerComponent implements AfterViewInit {
   @ViewChild('tw') typewriterElement!: ElementRef<HTMLElement>;
